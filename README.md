@@ -1,14 +1,16 @@
-# vue-highlight
+# Vue-highlight
 
 highlight.js for vue component.
 
 [https://yujinpan.github.io/vue-highlight/](https://yujinpan.github.io/vue-highlight/)
 
-## usage - install
+## Usage
+
+### Install
 
 `npm install --save vue-highlight`
 
-## usage - global
+### Global
 
 ```js
 import Vue from 'vue';
@@ -22,7 +24,7 @@ Vue.use(VueHighlight);
 <Highlight :code="code" lang="xml" />
 ```
 
-## usage - local
+### Local
 
 ```vue
 <template>
@@ -61,7 +63,7 @@ export default {
 </style>
 ```
 
-## add language pack
+### Add language pack
 
 ```js
 import highlight from 'highlight.js/lib/highlight';
