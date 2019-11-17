@@ -10,7 +10,7 @@ highlight.js for vue component.
 
 ## usage - global
 
-```
+```js
 import Vue from 'vue';
 import VueHighlight from 'vue-highlight';
 import 'highlight.js/styles/atom-one-light.css'; // import code style
@@ -18,13 +18,13 @@ import 'highlight.js/styles/atom-one-light.css'; // import code style
 Vue.use(VueHighlight);
 ```
 
-```
+```xml
 <Highlight :code="code" lang="xml" />
 ```
 
 ## usage - local
 
-```
+```xml
 <template>
   <Highlight class="code" :code="code" lang="xml" />
 </template>
@@ -63,13 +63,13 @@ export default {
 
 ## add language pack
 
-```
+```js
 import highlight from 'highlight.js/lib/highlight';
 import java from 'highlight.js/lib/languages/java';
 
 highlight.registerLanguage('java', java);
 ```
 
-```
+```xml
 <Highlight :code="javaCode" lang="java" />
 ```
