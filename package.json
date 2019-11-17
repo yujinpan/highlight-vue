@@ -1,5 +1,5 @@
 {
-  "name": "vue-highlight",
+  "name": "highlight-vue",
   "version": "1.0.0",
   "author": "yujinpan",
   "main": "lib/index.js",
@@ -61,12 +61,12 @@
     "last 2 versions"
   ],
   "bugs": {
-    "url": "https://github.com/yujinpan/vue-highlight/issues"
+    "url": "https://github.com/yujinpan/highlight-vue/issues"
   },
-  "homepage": "https://github.com/yujinpan/vue-highlight#readme",
+  "homepage": "https://github.com/yujinpan/highlight-vue#readme",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:yujinpan/vue-highlight.git"
+    "url": "git+ssh://git@github.com:yujinpan/highlight-vue.git"
   }
 }

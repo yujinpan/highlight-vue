@@ -3,7 +3,7 @@ const rollup = require('rollup');
 
 const banner =
   '/*!\n' +
-  ` * vue-highlight v${require('../package.json').version}\n` +
+  ` * highlight-vue v${require('../package.json').version}\n` +
   ` * (c) 2019-${new Date().getFullYear()} yujinpan\n` +
   ' * Released under the MIT License.\n' +
   ' */\n';

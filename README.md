@@ -2,19 +2,19 @@
 
 highlight.js for vue component.
 
-[https://yujinpan.github.io/vue-highlight/](https://yujinpan.github.io/vue-highlight/)
+[https://yujinpan.github.io/highlight-vue/](https://yujinpan.github.io/highlight-vue/)
 
 ## Usage
 
 ### Install
 
-`npm install --save vue-highlight`
+`npm install --save highlight-vue`
 
 ### Global
 
 ```js
 import Vue from 'vue';
-import VueHighlight from 'vue-highlight';
+import VueHighlight from 'highlight-vue';
 import 'highlight.js/styles/atom-one-light.css'; // import code style
 
 Vue.use(VueHighlight);
@@ -32,7 +32,7 @@ Vue.use(VueHighlight);
 </template>
 
 <script>
-import Highlight from 'vue-highlight';
+import Highlight from 'highlight-vue';
 import 'highlight.js/styles/atom-one-light.css'; // import code style
 
 export default {

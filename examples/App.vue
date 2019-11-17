@@ -4,8 +4,8 @@
     <h4>Version: {{ version }}</h4>
     <h4>
       Github:
-      <a target="_blank" href="https://github.com/yujinpan/vue-highlight"
-        >https://github.com/yujinpan/vue-highlight</a
+      <a target="_blank" href="https://github.com/yujinpan/highlight-vue"
+        >https://github.com/yujinpan/highlight-vue</a
       >
     </h4>
     <h4>Author: yujinpan</h4>
@@ -38,12 +38,12 @@ export default {
       usage: [
         {
           title: 'Install:',
-          codes: [`npm install --save vue-highlight`]
+          codes: [`npm install --save highlight-vue`]
         },
         {
           title: 'Usage global:',
           codes: [
-            `import Vue from 'vue';\nimport VueHighlight from 'vue-highlight';\nimport 'highlight.js/styles/atom-one-light.css'; // import code style\n\nVue.use(VueHighlight);`,
+            `import Vue from 'vue';\nimport VueHighlight from 'highlight-vue';\nimport 'highlight.js/styles/atom-one-light.css'; // import code style\n\nVue.use(VueHighlight);`,
             `<Highlight :code="code" lang="xml" />`
           ]
         },
