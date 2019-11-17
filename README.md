@@ -18,13 +18,13 @@ import 'highlight.js/styles/atom-one-light.css'; // import code style
 Vue.use(VueHighlight);
 ```
 
-```xml
+```vue
 <Highlight :code="code" lang="xml" />
 ```
 
 ## usage - local
 
-```xml
+```vue
 <template>
   <Highlight class="code" :code="code" lang="xml" />
 </template>
@@ -70,6 +70,6 @@ import java from 'highlight.js/lib/languages/java';
 highlight.registerLanguage('java', java);
 ```
 
-```xml
+```vue
 <Highlight :code="javaCode" lang="java" />
 ```
