@@ -2,7 +2,7 @@
 
 highlight.js for vue component.
 
-[online example](https://yujinpan.github.io/vue-highlight/)
+[https://yujinpan.github.io/vue-highlight/](https://yujinpan.github.io/vue-highlight/)
 
 ## usage - install
 
