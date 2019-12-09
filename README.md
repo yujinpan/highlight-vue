@@ -1,4 +1,4 @@
-# Vue-highlight
+# highlight-vue
 
 highlight.js for vue component.
 

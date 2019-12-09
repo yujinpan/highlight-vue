@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="full-height">
-    <h2>Vue-highlight</h2>
+    <h2>highlight-vue</h2>
     <h4>Version: {{ version }}</h4>
     <h4>
       Github:
