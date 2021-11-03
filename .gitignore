@@ -1,9 +1,9 @@
 .DS_Store
 node_modules
 stat
-lib
-# dist
 package-lock.json
+lib
+types
 
 # local env files
 .env.local
