@@ -16,19 +16,4 @@ export default {
     };
   }
 };
-</script>
-
-<style scoped lang="scss">
-// container style
-.code {
-  background-color: #eee;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  line-height: 1.3em;
-
-  ::v-deep code {
-    font-family: Monaco;
-  }
-}
-</style>`;
+</script>`;

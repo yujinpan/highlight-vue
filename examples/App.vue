@@ -1,29 +1,29 @@
 <template>
   <div id="app" class="full-height">
     <h2>highlight-vue</h2>
-    <h4>Version: {{ version }}</h4>
+    <h4>Version: <Highlight :code="version"></Highlight></h4>
     <h4>
       Github:
       <a target="_blank" href="https://github.com/yujinpan/highlight-vue"
         >https://github.com/yujinpan/highlight-vue</a
       >
     </h4>
-    <h4>Author: yujinpan</h4>
-    <span v-for="item in usage" :key="item">
+    <h4>Author: <Highlight code="yujinpan"></Highlight></h4>
+    <span v-for="(item, index) in usage" :key="index">
       <h3>{{ item.title }}</h3>
       <Highlight
-        v-for="item in item.codes"
-        :key="item"
-        :code="item"
-        class="highlight"
-        lang="xml"
+        v-for="(code, index) in item.codes"
+        :key="index"
+        :code="code"
+        :lang="item.lang"
+        pre
       />
     </span>
   </div>
 </template>
 
 <script>
-import Highlight from '../lib';
+import Highlight from '../src';
 import 'highlight.js/styles/atom-one-light.css';
 import exampleTemplate from './example-template';
 import pak from '../package';
@@ -38,24 +38,47 @@ export default {
       usage: [
         {
           title: 'Install:',
-          codes: [`npm install --save highlight-vue`]
+          codes: [`$ npm install --save highlight-vue`],
+          lang: 'shell'
         },
         {
           title: 'Usage global:',
           codes: [
-            `import Vue from 'vue';\nimport VueHighlight from 'highlight-vue';\nimport 'highlight.js/styles/atom-one-light.css'; // import code style\n\nVue.use(VueHighlight);`,
+            `
+import Vue from 'vue';
+import VueHighlight from 'highlight-vue';
+import 'highlight.js/styles/atom-one-light.css'; // import code style
+
+Vue.use(VueHighlight);`,
             `<Highlight :code="code" lang="xml" />`
-          ]
+          ],
+          lang: 'js'
         },
         {
           title: 'Usage local:',
-          codes: [exampleTemplate]
+          codes: [exampleTemplate],
+          lang: 'xml'
         },
         {
           title: 'Add language pack:',
           codes: [
-            `import highlight from 'highlight.js/lib/highlight';\nimport java from 'highlight.js/lib/languages/java';\n\nhighlight.registerLanguage('java', java);`,
+            `
+import highlight from 'highlight.js/lib/highlight';
+import java from 'highlight.js/lib/languages/java';
+
+highlight.registerLanguage('java', java);`,
             `<Highlight :code="javaCode" lang="java" />`
+          ],
+          lang: 'js'
+        },
+        {
+          title: 'Props',
+          codes: [
+            `
+- \`code\` the code content
+- \`lang\` the language, default import \`js\`, \`css\`, \`scss\`, \`shell\`, \`xml\`
+- \`pre\` add the \`<pre></prev\` tag to wrap
+`
           ]
         }
       ]
@@ -69,17 +92,5 @@ export default {
   font-size: 14px;
   color: #444;
   padding: 20px;
-
-  .highlight {
-    background-color: #eee;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    line-height: 1.3em;
-
-    ::v-deep code {
-      font-family: Monaco;
-    }
-  }
 }
 </style>

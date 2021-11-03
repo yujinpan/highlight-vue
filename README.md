@@ -21,14 +21,14 @@ Vue.use(VueHighlight);
 ```
 
 ```vue
-<Highlight :code="code" lang="xml" />
+<Highlight :code="code" lang="xml" pre />
 ```
 
 ### Local
 
 ```vue
 <template>
-  <Highlight class="code" :code="code" lang="xml" />
+  <Highlight class="code" :code="code" lang="xml" pre />
 </template>
 
 <script>
@@ -46,21 +46,6 @@ export default {
   }
 };
 </script>
-
-<style scoped lang="scss">
-// container style
-.code {
-  background-color: #eee;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  line-height: 1.3em;
-
-  ::v-deep code {
-    font-family: Monaco;
-  }
-}
-</style>
 ```
 
 ### Add language pack
@@ -73,5 +58,11 @@ highlight.registerLanguage('java', java);
 ```
 
 ```vue
-<Highlight :code="javaCode" lang="java" />
+<Highlight :code="javaCode" lang="java" pre />
 ```
+
+### Props
+
+- `code` the code content
+- `lang` the language, default import `js`, `css`, `scss`, `shell`, `xml`
+- `pre` add the `<pre></prev` tag to wrap
