@@ -6,9 +6,9 @@ module.exports = {
     ' * Released under the MIT License.\n' +
     ' */\n',
   inputFiles: ['**/*'],
-  outputDir: 'dist',
+  outputDir: 'lib',
   stylesParseFiles: [],
   stylesCopyFiles: ['**/*'],
-  typesOutputDir: 'dist',
+  typesOutputDir: 'lib',
   singleFile: false
 };
