@@ -14,21 +14,21 @@ highlight.js for vue component.
 
 ```js
 import Vue from 'vue';
-import VueHighlight from 'highlight-vue';
+import Highlight from 'highlight-vue';
 import 'highlight.js/styles/atom-one-light.css'; // import code style
 
-Vue.use(VueHighlight);
+Vue.use(Highlight);
 ```
 
 ```vue
-<Highlight :code="code" lang="xml" pre />
+<Highlight :code="code" lang="xml" />
 ```
 
 ### Local
 
 ```vue
 <template>
-  <Highlight class="code" :code="code" lang="xml" pre />
+  <Highlight class="code" :code="code" lang="xml" />
 </template>
 
 <script>
@@ -58,11 +58,11 @@ highlight.registerLanguage('java', java);
 ```
 
 ```vue
-<Highlight :code="javaCode" lang="java" pre />
+<Highlight :code="javaCode" lang="java" />
 ```
 
 ### Props
 
 - `code` the code content
 - `lang` the language, default import `js`, `css`, `scss`, `shell`, `xml`
-- `pre` add the `<pre></prev` tag to wrap
+- `pre` add the `<pre></prev` tag to wrap, default `true`

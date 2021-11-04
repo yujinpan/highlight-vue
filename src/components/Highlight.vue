@@ -12,7 +12,10 @@ export default {
       type: String,
       default: 'xml'
     },
-    pre: Boolean
+    pre: {
+      type: Boolean,
+      default: true
+    }
   },
   render(h, { props, data }) {
     const code = highlight.highlight(props.lang, props.code.trim()).value;

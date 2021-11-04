@@ -16,7 +16,6 @@
         :key="index"
         :code="code"
         :lang="item.lang"
-        pre
       />
     </span>
   </div>
@@ -46,10 +45,10 @@ export default {
           codes: [
             `
 import Vue from 'vue';
-import VueHighlight from 'highlight-vue';
+import Highlight from 'highlight-vue';
 import 'highlight.js/styles/atom-one-light.css'; // import code style
 
-Vue.use(VueHighlight);`,
+Vue.use(Highlight);`,
             `<Highlight :code="code" lang="xml" />`
           ],
           lang: 'js'
@@ -77,7 +76,7 @@ highlight.registerLanguage('java', java);`,
             `
 - \`code\` the code content
 - \`lang\` the language, default import \`js\`, \`css\`, \`scss\`, \`shell\`, \`xml\`
-- \`pre\` add the \`<pre></prev\` tag to wrap
+- \`pre\` add the \`<pre></prev\` tag to wrap, default \`true\`
 `
           ]
         }
