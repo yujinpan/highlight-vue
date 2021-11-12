@@ -1,14 +1,14 @@
 <template>
   <div id="app" class="full-height">
     <h2>highlight-vue</h2>
-    <h4>Version: <Highlight :code="version"></Highlight></h4>
+    <h4>Version: <Highlight :code="version" :pre="false"></Highlight></h4>
     <h4>
       Github:
       <a target="_blank" href="https://github.com/yujinpan/highlight-vue"
         >https://github.com/yujinpan/highlight-vue</a
       >
     </h4>
-    <h4>Author: <Highlight code="yujinpan"></Highlight></h4>
+    <h4>Author: <Highlight code="yujinpan" :pre="false"></Highlight></h4>
     <span v-for="(item, index) in usage" :key="index">
       <h3>{{ item.title }}</h3>
       <Highlight
