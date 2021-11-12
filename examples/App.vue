@@ -56,7 +56,7 @@ Vue.use(Highlight);`,
         {
           title: 'Usage local:',
           codes: [exampleTemplate],
-          lang: 'xml'
+          lang: 'vue'
         },
         {
           title: 'Add language pack:',

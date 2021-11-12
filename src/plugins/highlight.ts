@@ -3,7 +3,7 @@ import highlight from 'highlight.js/lib/core';
 
 highlight.registerLanguage('xml', require('highlight.js/lib/languages/xml'));
 highlight.registerLanguage(
-  'js',
+  'javascript',
   require('highlight.js/lib/languages/javascript')
 );
 highlight.registerLanguage('css', require('highlight.js/lib/languages/css'));
@@ -12,3 +12,8 @@ highlight.registerLanguage(
   'shell',
   require('highlight.js/lib/languages/shell')
 );
+
+require('highlightjs-vue')(highlight);
+
+highlight.registerAliases(['js'], { languageName: 'javascript' });
+highlight.registerAliases(['sh'], { languageName: 'shell' });
