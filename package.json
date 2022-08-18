@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.x",
+    "@types/prismjs": "^1.26.0",
     "core-js": "^3.19.1",
     "prismjs": "^1.28.0",
     "style-inject": "^0.x",
