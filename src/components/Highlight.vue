@@ -1,5 +1,11 @@
 <script lang="tsx">
-import highlight from 'highlight.js/lib/core';
+import prism from 'prismjs';
+import 'prismjs/components/prism-markup';
+import 'prismjs/components/prism-css';
+import 'prismjs/components/prism-sass';
+import 'prismjs/components/prism-javascript';
+import 'prismjs/components/prism-typescript';
+import 'prismjs/components/prism-bash';
 
 export default {
   functional: true,
@@ -10,7 +16,7 @@ export default {
     },
     lang: {
       type: String,
-      default: 'xml'
+      default: 'vue'
     },
     pre: {
       type: Boolean,
@@ -18,15 +24,28 @@ export default {
     }
   },
   render(h, { props, data }) {
-    const code = highlight.highlight(props.lang, props.code.trim()).value;
+    const lang =
+      {
+        vue: 'markup',
+        html: 'markup',
+        md: 'markdown',
+        ts: 'typescript',
+        sh: 'bash',
+        shell: 'bash'
+      }[props.lang] || props.lang;
+    const code = prism.highlight(
+      props.code.trim(),
+      prism.languages[lang],
+      lang
+    );
 
     return props.pre ? (
-      <pre class="highlight-vue" {...data}>
+      <pre class={`highlight-vue language-${lang}`} {...data}>
         <code {...{ domProps: { innerHTML: code } }}></code>
       </pre>
     ) : (
       <code
-        class="highlight-vue"
+        class={`highlight-vue language-${lang}`}
         {...{ ...data, domProps: { innerHTML: code } }}
       ></code>
     );
@@ -35,35 +54,10 @@ export default {
 </script>
 
 <style lang="scss">
-code.highlight-vue,
 pre.highlight-vue {
-  border: 1px solid #e5e5e5;
-  border-radius: 2px;
-  background-color: #fafafa;
+  border-radius: 4px;
 }
-
-code.highlight-vue,
-pre.highlight-vue code {
-  padding: 2px 4px;
-  font-size: 86%;
-  font-family: 'Menlo', 'DejaVu Sans Mono', 'Liberation Mono', 'Consolas',
-    'Ubuntu Mono', 'Courier New', 'andale mono', 'lucida console', monospace;
-}
-
-pre.highlight-vue {
-  font-size: 0.9em;
-  overflow: auto;
-  padding: 16px 24px;
-  line-height: 1.6;
-  word-break: break-all;
-  word-wrap: break-word;
-
-  code {
-    padding: unset;
-    font-size: inherit;
-    background: unset;
-    border: unset;
-    border-radius: unset;
-  }
+code.highlight-vue {
+  padding: 2px 4px !important;
 }
 </style>

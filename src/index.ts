@@ -1,5 +1,3 @@
-import '@/plugins/highlight';
-
 // 主组件
 import Highlight from '@/components/Highlight.vue';
 
