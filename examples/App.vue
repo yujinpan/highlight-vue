@@ -23,7 +23,7 @@
 
 <script>
 import Highlight from '../src';
-import '../src/theme/light';
+import '../src/themes/light';
 import exampleTemplate from './example-template';
 import pak from '../package';
 
