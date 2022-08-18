@@ -49,9 +49,9 @@ import Highlight from 'highlight-vue';
 
 // theme(required)
 // light style
-import 'highlight-vue/dist/themes/light';
+import 'highlight-vue/lib/themes/light';
 // dart style
-// import 'highlight-vue/dist/themes/dart';
+// import 'highlight-vue/lib/themes/dart';
 
 Vue.use(Highlight);`,
             `<Highlight :code="code" lang="xml" />`
