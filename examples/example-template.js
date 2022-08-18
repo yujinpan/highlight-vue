@@ -4,7 +4,12 @@ export default `<template>
 
 <script>
 import Highlight from 'highlight-vue';
-import 'highlight.js/styles/atom-one-light.css'; // import code style
+
+// theme(required)
+// light style
+import 'highlight-vue/dist/themes/light';
+// dart style
+// import 'highlight-vue/dist/themes/dart';
 
 export default {
   components: {

@@ -23,7 +23,7 @@
 
 <script>
 import Highlight from '../src';
-import 'highlight.js/styles/atom-one-light.css';
+import '../src/theme/light';
 import exampleTemplate from './example-template';
 import pak from '../package';
 
@@ -46,7 +46,12 @@ export default {
             `
 import Vue from 'vue';
 import Highlight from 'highlight-vue';
-import 'highlight.js/styles/atom-one-light.css'; // import code style
+
+// theme(required)
+// light style
+import 'highlight-vue/dist/themes/light';
+// dart style
+// import 'highlight-vue/dist/themes/dart';
 
 Vue.use(Highlight);`,
             `<Highlight :code="code" lang="xml" />`
@@ -62,12 +67,14 @@ Vue.use(Highlight);`,
           title: 'Add language pack:',
           codes: [
             `
-import highlight from 'highlight.js/lib/highlight';
-import java from 'highlight.js/lib/languages/java';
-
-highlight.registerLanguage('java', java);`,
+import 'prismjs/components/prism-java';`,
             `<Highlight :code="javaCode" lang="java" />`
           ],
+          lang: 'js'
+        },
+        {
+          title: 'More themes:',
+          codes: [`import 'prismjs/themes/prism-dark.css';`],
           lang: 'js'
         },
         {

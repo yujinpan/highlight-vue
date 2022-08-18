@@ -1,6 +1,6 @@
 # highlight-vue
 
-highlight.js for vue component.
+[`prismjs`](https://prismjs.com/) for vue component.
 
 [https://yujinpan.github.io/highlight-vue/](https://yujinpan.github.io/highlight-vue/)
 
@@ -15,7 +15,12 @@ highlight.js for vue component.
 ```js
 import Vue from 'vue';
 import Highlight from 'highlight-vue';
-import 'highlight.js/styles/atom-one-light.css'; // import code style
+
+// theme(required)
+// light style
+import 'highlight-vue/dist/themes/light';
+// dart style
+// import 'highlight-vue/dist/themes/dart';
 
 Vue.use(Highlight);
 ```
@@ -33,7 +38,12 @@ Vue.use(Highlight);
 
 <script>
 import Highlight from 'highlight-vue';
-import 'highlight.js/styles/atom-one-light.css'; // import code style
+
+// theme(required)
+// light style
+import 'highlight-vue/dist/themes/light';
+// dart style
+// import 'highlight-vue/dist/themes/dart';
 
 export default {
   components: {
@@ -51,14 +61,17 @@ export default {
 ### Add language pack
 
 ```js
-import highlight from 'highlight.js/lib/highlight';
-import java from 'highlight.js/lib/languages/java';
-
-highlight.registerLanguage('java', java);
+import 'prismjs/components/prism-java';
 ```
 
 ```vue
 <Highlight :code="javaCode" lang="java" />
+```
+
+### More themes
+
+```js
+import 'prismjs/themes/prism-dark.css';
 ```
 
 ### Props
