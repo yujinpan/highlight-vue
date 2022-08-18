@@ -61,6 +61,7 @@ export default {
 ### Add language pack
 
 ```js
+import 'prismjs';
 import 'prismjs/components/prism-java';
 ```
 

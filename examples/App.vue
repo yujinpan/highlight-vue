@@ -67,6 +67,7 @@ Vue.use(Highlight);`,
           title: 'Add language pack:',
           codes: [
             `
+import 'prismjs';
 import 'prismjs/components/prism-java';`,
             `<Highlight :code="javaCode" lang="java" />`
           ],
